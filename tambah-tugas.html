@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Tugas Baru - TaskMate</title>
+</head>
+<body>
+    <header>
+        <h1>TaskMate</h1>
+        <p>Aplikasi Manajemen & Pencatatan Tugas Kuliah</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Daftar Tugas</a></li>
+                <li><a href="tambah-tugas.html">Tambah Tugas Baru</a></li>
+                <li><a href="detail-tugas.html">Detail Tugas (Contoh)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Form Tambah Tugas Baru</h2>
+            <p>Isi formulir di bawah ini untuk menambahkan tugas kuliah baru ke dalam daftar TaskMate.</p>
+
+            <form action="#" method="post">
+                <p>
+                    <label for="mata-kuliah">Mata Kuliah:</label><br>
+                    <input type="text" id="mata-kuliah" name="mata_kuliah" placeholder="Contoh: Web Programming" required>
+                </p>
+
+                <p>
+                    <label for="judul-tugas">Judul Tugas:</label><br>
+                    <input type="text" id="judul-tugas" name="judul_tugas" placeholder="Contoh: Tugas 2 HTML Murni" required>
+                </p>
+
+                <p>
+                    <label for="deadline">Tanggal Deadline:</label><br>
+                    <input type="date" id="deadline" name="deadline" required>
+                </p>
+
+                <p>
+                    <label for="prioritas">Tingkat Prioritas:</label><br>
+                    <select id="prioritas" name="prioritas" required>
+                        <option value="">-- Pilih Prioritas --</option>
+                        <option value="rendah">Rendah</option>
+                        <option value="sedang">Sedang</option>
+                        <option value="tinggi">Tinggi</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="status">Status Pengerjaan:</label><br>
+                    <select id="status" name="status" required>
+                        <option value="belum">Belum Dimulai</option>
+                        <option value="proses">Sedang Dikerjakan</option>
+                        <option value="selesai">Selesai</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="deskripsi">Deskripsi Tugas:</label><br>
+                    <textarea id="deskripsi" name="deskripsi" rows="5" cols="40" placeholder="Tuliskan instruksi atau catatan tugas di sini..."></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Simpan Tugas</button>
+                    <button type="reset">Batal / Reset</button>
+                </p>
+            </form>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TaskMate - Mikdam Huda (1302223034)</p>
+    </footer>
+</body>
+</html>
