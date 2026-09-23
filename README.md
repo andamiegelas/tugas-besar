@@ -7,7 +7,7 @@
 
 ---
 
-## 📌 Deskripsi Tugas
+## Deskripsi Tugas
 Tugas ini merupakan tahap pertama (pembentukan struktur HTML murni tanpa CSS / Framework) dari proyek aplikasi fullstack **TaskMate**. 
 
 Proyek ini terdiri dari 3 halaman HTML utama:
@@ -17,7 +17,7 @@ Proyek ini terdiri dari 3 halaman HTML utama:
 
 ---
 
-## 🏗️ Struktur Semantic HTML5 & Aksesibilitas
+##  Struktur Semantic HTML5 & Aksesibilitas
 - **Semantic Tags:** Menggunakan `<header>`, `<nav>`, `<main>`, `<article>`, dan `<footer>` pada seluruh halaman.
 - **Form & Label Accessibility:** Setiap elemen `<input>`, `<select>`, dan `<textarea>` pada `tambah-tugas.html` menggunakan `<label for="...">` yang terhubung secara eksplisit dengan `id`.
 - **Image Accessibility:** Atribut `alt` deskriptif diberikan pada tag `<img>` di halaman `detail-tugas.html`.
@@ -28,11 +28,3 @@ Proyek ini terdiri dari 3 halaman HTML utama:
 ## 📸 Tampilan Halaman (Screenshots)
 *(Screenshot disimpan di folder `docs/screenshots/`)*
 
-1. **Halaman Utama (`index.html`)**
-   ![Index Page](docs/screenshots/index.png)
-
-2. **Form Tambah Tugas (`tambah-tugas.html`)**
-   ![Tambah Tugas Page](docs/screenshots/tambah-tugas.png)
-
-3. **Detail Tugas (`detail-tugas.html`)**
-   ![Detail Tugas Page](docs/screenshots/detail-tugas.png)
