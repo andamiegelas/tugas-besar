@@ -25,6 +25,6 @@ Proyek ini terdiri dari 3 halaman HTML utama:
 
 ---
 
-## 📸 Tampilan Halaman (Screenshots)
-*(Screenshot disimpan di folder `docs/screenshots/`)*
+## Tampilan Halaman (Screenshots)
+*Screenshot disimpan di folder `docs/screenshots/`*
 
