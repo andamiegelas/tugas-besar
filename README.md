@@ -1,37 +1,55 @@
-# Tugas Besar - Struktur HTML Murni (TaskMate)
+# TaskMate - Student Task Tracker
 
-**Mata Kuliah:** Web Programming  
-**Mahasiswa:** Mikdam Huda  
-**NIM:** 1302223034  
-**Topik Aplikasi:** TaskMate (Student Task Tracker)  
-
----
-
-## Deskripsi Proyek
-Proyek ini merupakan tahap pertama (pembentukan struktur HTML murni tanpa CSS / Framework) dari aplikasi fullstack **TaskMate**. 
-
-Aplikasi terdiri dari 3 halaman HTML utama:
-1. `index.html` - Halaman Utama / Daftar Tugas & Ringkasan
-2. `tambah-tugas.html` - Form Tambah Data Tugas Baru
-3. `detail-tugas.html` - Halaman Detail Informasi Spesifik Tugas
+Tugas Web Programming (S1 Rekayasa Perangkat Lunak)  
+Nama: Mikdam Huda  
+NIM: 1302223034  
 
 ---
 
-## Struktur Semantic HTML5 & Aksesibilitas
-- **Semantic Tags:** Menggunakan `<header>`, `<nav>`, `<main>`, `<article>`, dan `<footer>` pada seluruh halaman.
-- **Form & Label Accessibility:** Setiap elemen `<input>`, `<select>`, dan `<textarea>` pada `tambah-tugas.html` menggunakan `<label for="...">` yang terhubung secara eksplisit dengan `id`.
-- **Image Accessibility:** Atribut `alt` deskriptif diberikan pada tag `<img>` di halaman `detail-tugas.html`.
-- **Tabel Data:** Halaman `index.html` dan `detail-tugas.html` memuat elemen `<table>`, `<thead>`, `<tbody>`, `<th>`, dan `<td>`.
+## Deskripsi
+TaskMate adalah web sederhana untuk mencatat tugas-tugas kuliah. Pengguna dapat melihat daftar tugas yang sedang berjalan, menambah tugas baru beserta deadlinenya, dan melihat detail serta status pengerjaan tugas agar tidak terlewat.
+
+Web ini dibuat menggunakan HTML, CSS (style.css), dan framework Bootstrap 5.
 
 ---
 
-## Tampilan Halaman (Screenshots)
+## Alasan Pemilihan Bootstrap
+Framework yang digunakan pada proyek ini adalah Bootstrap 5, dengan alasan:
+1. Menyediakan sistem grid (`container`, `row`, `col`) yang mempermudah pembagian kolom pada dashboard dan form.
+2. Memiliki komponen siap pakai seperti navbar, tabel, dan form input sehingga pembuatan halaman lebih cepat.
+3. Tampilan sudah responsif untuk ukuran mobile dan desktop tanpa perlu menulis ulang banyak kode CSS.
 
-1. **Halaman Utama (`index.html`)**
-   ![Halaman Utama](docs/screenshots/index.png)
+---
 
-2. **Form Tambah Tugas (`tambah-tugas.html`)**
-   ![Form Tambah Tugas](docs/screenshots/tambah.png)
+## Halaman Aplikasi
+1. `index.html`: Dashboard ringkasan jumlah status tugas dan tabel daftar tugas kuliah.
+2. `tambah-tugas.html`: Form untuk memasukkan data tugas baru.
+3. `detail-tugas.html`: Halaman detail informasi tugas dan catatan sub-tugas.
 
-3. **Detail Tugas (`detail-tugas.html`)**
-   ![Detail Tugas](docs/screenshots/detail.png)
+---
+
+## Screenshot Tampilan
+
+### Tampilan Desktop
+
+1. **Dashboard (`index.html`)**  
+   ![Dashboard Desktop](docs/screenshots/desktop-index.png)
+
+2. **Form Tambah Tugas (`tambah-tugas.html`)**  
+   ![Form Tambah Tugas Desktop](docs/screenshots/desktop-tambah.png)
+
+3. **Detail Tugas (`detail-tugas.html`)**  
+   ![Detail Tugas Desktop](docs/screenshots/desktop-detail.png)
+
+---
+
+### Tampilan Mobile
+
+1. **Dashboard Mobile**  
+   ![Dashboard Mobile](docs/screenshots/mobile-index.png)
+
+2. **Form Tambah Tugas Mobile**  
+   ![Form Tambah Tugas Mobile](docs/screenshots/mobile-tambah.png)
+
+3. **Detail Tugas Mobile**  
+   ![Detail Tugas Mobile](docs/screenshots/mobile-detail.png)
