@@ -6,112 +6,75 @@ NIM: 1302223034
 
 ---
 
-## Deskripsi Aplikasi
-TaskMate adalah aplikasi web pencatatan dan pengelolaan tugas perkuliahan. Aplikasi ini membantu mahasiswa mengorganisir daftar tugas, memantau tenggat waktu (deadline), serta memperbarui status pengerjaan secara interaktif di sisi klien (client-side).
+## Deskripsi
+TaskMate adalah web sederhana untuk mencatat tugas-tugas kuliah. Di web ini kita bisa melihat daftar tugas yang sedang berjalan, menambah tugas baru beserta deadlinenya, dan melihat detail serta status pengerjaan tugas biar tidak terlewat.
 
-Aplikasi ini dibangun menggunakan HTML semantic, CSS native (`style.css`), Bootstrap 5, JavaScript murni, dan library jQuery.
-
----
-
-## Teknologi yang Digunakan
-1. **HTML5**: Struktur halaman semantik (`<header>`, `<nav>`, `<main>`, `<article>`, `<aside>`, `<footer>`, `<form>`, `<table>`).
-2. **CSS3 Native (`style.css`)**: Tata warna, tipografi, badge prioritas/status, efek interaksi klik, serta media query untuk tampilan responsif.
-3. **Bootstrap 5**: Tata letak grid (`container`, `row`, `col`), navigasi navbar, komponen tabel responsif, formulir, dan kartu informasi.
-4. **JavaScript Murni**:
-   - Penyimpanan data dummy berbasis array of objects (`DATA_AWAL`).
-   - Fungsi pemrosesan data: `hitungStatistik()` untuk rekapitulasi jumlah tugas dan `filterDataTugas()` untuk penyaringan data.
-   - Struktur perulangan (`for`) dan percabangan (`if-else`) pada fungsi `renderTabel()` untuk membuat baris tabel secara dinamis ke elemen DOM.
-5. **jQuery**:
-   - Efek animasi dan tampilan: `slideToggle()` untuk panel filter dan daftar sub-tugas, `fadeIn()` dan `fadeOut()` untuk banner notifikasi.
-   - Event handling: event `.on('click')` untuk tombol aksi (filter, hapus data, reset) dan event `.on('submit')` untuk validasi field formulir.
+Web ini dibuat pakai HTML, CSS (style.css), framework Bootstrap 5, JavaScript murni, dan library jQuery.
 
 ---
 
-## Struktur Halaman
-1. `index.html`: Dashboard ringkasan jumlah status tugas, filter status, tabel daftar tugas dinamis, dan aksi hapus data.
-2. `tambah-tugas.html`: Formulir penambahan tugas baru dengan validasi field wajib dan feedback alert interaktif.
-3. `detail-tugas.html`: Rincian deskripsi tugas, checklist sub-tugas interaktif, dan panel informasi metadata.
+## Fitur JavaScript & jQuery (Tugas 5)
+Di tugas 5 ini ditambahkan interaktivitas:
+
+1. **JavaScript Murni**:
+   - Data tugas disimpan di array of object (data dummy).
+   - Baris tabel tugas di `index.html` dan 4 kotak status di atas di-render otomatis pakai perulangan dan percabangan JavaScript (bukan ditulis manual di HTML).
+   - Ada fungsi untuk menghitung total status tugas (`hitungStatistik`) dan fungsi filter tugas berdasarkan statusnya (`filterDataTugas`).
+
+2. **jQuery**:
+   - Efek animasi `slideToggle` untuk buka tutup panel filter dan daftar sub-tugas di halaman detail.
+   - Efek `fadeIn` dan `fadeOut` saat menghapus baris tabel dan memunculkan notifikasi alert.
+   - Event klik tombol filter, tombol hapus tugas, tombol reset data awal, dan validasi form tambah tugas (mengecek jika ada input yang masih kosong sebelum disimpan).
 
 ---
 
-## Video Demonstrasi Interaktivitas
-Rekaman video demonstrasi yang menampilkan seluruh rangkaian interaksi sisi client (filter data, penghapusan tugas, validasi formulir kosong, penambahan tugas baru, serta checklist dan toggle sub-tugas) tersedia pada repositori:
-- Berkas Video: [docs/videos/demo_interaktivitas_tugas5.webm](docs/videos/demo_interaktivitas_tugas5.webm)
+## Video Demo
+Video interaktivitas bisa dilihat di:
+- [docs/videos/demo_interaktivitas_tugas5.webm](docs/videos/demo_interaktivitas_tugas5.webm)
 
 ---
 
-## Petunjuk Pengambilan Video Demonstrasi
-Video demonstrasi interaktivitas berdurasi sekitar 1 hingga 2 menit. Berikut langkah-langkah yang perlu direkam:
+## Screenshot Interaktivitas
 
-1. **Dashboard dan Render Dinamis (`index.html`)**:
-   - Tampilkan dashboard, jelaskan secara singkat bahwa 4 kotak rekapitulasi statistik dan isi tabel di-render otomatis dari JavaScript menggunakan array data dummy.
-2. **Efek Animasi dan Filter Data (jQuery `slideToggle` & Event Click)**:
-   - Klik tombol "Filter Tugas" untuk menampilkan panel filter yang terbuka dengan animasi turun (`slideToggle`).
-   - Klik tombol status seperti "Sedang Dikerjakan" atau "Selesai" untuk memperlihatkan tabel yang otomatis tersaring sesuai status.
-   - Klik tombol "Semua" untuk mengembalikan tampilan seluruh data.
-3. **Aksi Hapus dan Notifikasi (jQuery `fadeOut`, `fadeIn`, & Manipulasi Data)**:
-   - Klik tombol "Hapus" pada salah satu baris tugas.
-   - Tunjukkan baris tugas yang menghilang dengan efek `fadeOut`, kartu statistik yang otomatis berkurang angkanya, dan banner notifikasi hijau yang muncul (`fadeIn`).
-4. **Validasi Formulir (`tambah-tugas.html`)**:
-   - Masuk ke menu "Tambah Tugas".
-   - Langsung klik tombol "Simpan" tanpa mengisi field untuk mendemonstrasikan validasi jQuery (muncul alert merah "Mohon isi seluruh bidang wajib formulir").
-   - Isi seluruh formulir tugas baru secara lengkap, lalu klik "Simpan" untuk memperlihatkan alert sukses hijau.
-5. **Pengecekan Data Baru (`index.html`)**:
-   - Buka kembali menu "Daftar Tugas", perlihatkan data yang baru ditambahkan sudah masuk ke tabel dan angka total tugas bertambah.
-6. **Interaktivitas Detail Tugas (`detail-tugas.html`)**:
-   - Buka salah satu halaman detail tugas.
-   - Klik butir-butir sub-tugas untuk menandai sub-tugas telah selesai (efek coret / strikethrough).
-   - Klik tombol "Sembunyikan Sub-Tugas" untuk mendemonstrasikan penutupan daftar dengan efek animasi `slideToggle`.
-
----
-
-## Bukti Screenshot Interaktivitas (Sebelum dan Sesudah)
-
-### 1. Interaktivitas Filter Tugas (Efek slideToggle dan Penyaringan Data)
-- **Sebelum Interaksi (Panel Filter Tertutup, Semua Data Tampil)**:  
+### 1. Filter Tugas
+- Sebelum filter:  
   ![Sebelum Filter](docs/screenshots/sebelum-filter.png)
 
-- **Sesudah Interaksi (Panel Filter Terbuka via slideToggle, Data Terfilter Status 'Sedang Dikerjakan')**:  
+- Sesudah filter (panel terbuka dan data terfilter):  
   ![Sesudah Filter](docs/screenshots/sesudah-filter.png)
 
----
-
-### 2. Interaktivitas Hapus Data (Efek fadeOut, Perhitungan Ulang Statistik, dan Notifikasi)
-- **Sebelum Interaksi (Terdapat 3 Tugas, Tombol Hapus Tersedia)**:  
+### 2. Hapus Tugas
+- Sebelum hapus:  
   ![Sebelum Hapus](docs/screenshots/sebelum-hapus.png)
 
-- **Sesudah Interaksi (Baris Dihapus via fadeOut, Total Tugas Berubah Menjadi 2, Notifikasi Muncul)**:  
+- Sesudah hapus (baris hilang dan notifikasi muncul):  
   ![Sesudah Hapus](docs/screenshots/sesudah-hapus.png)
 
----
+### 3. Validasi Form Tambah Tugas
+- Sebelum validasi (form masih kosong):  
+  ![Sebelum Validasi](docs/screenshots/sebelum-validasi.png)
 
-### 3. Validasi Form Tambah Tugas (jQuery on submit dan slideDown Error)
-- **Sebelum Validasi (Formulir Masih Kosong)**:  
-  ![Sebelum Validasi Form](docs/screenshots/sebelum-validasi.png)
+- Sesudah klik simpan (muncul alert merah):  
+  ![Sesudah Validasi Error](docs/screenshots/sesudah-validasi.png)
 
-- **Sesudah Validasi (Pesan Peringatan Muncul Akibat Field Kosong)**:  
-  ![Sesudah Validasi Form](docs/screenshots/sesudah-validasi.png)
-
-- **Sesudah Form Berhasil Disimpan (Notifikasi Sukses Muncul via fadeIn)**:  
+- Sesudah form diisi dan disimpan (muncul alert hijau):  
   ![Sesudah Tambah Sukses](docs/screenshots/sesudah-tambah-sukses.png)
 
----
+### 4. Detail Sub-Tugas
+- Tampilan awal sub-tugas:  
+  ![Sebelum Subtugas](docs/screenshots/sebelum-subtugas.png)
 
-### 4. Interaktivitas Halaman Detail (Checklist dan Sembunyikan Sub-Tugas)
-- **Sebelum Interaksi (Daftar Sub-Tugas Standar)**:  
-  ![Sebelum Interaksi Subtugas](docs/screenshots/sebelum-subtugas.png)
-
-- **Sesudah Interaksi Sub-Tugas Tercoret (Selesai)**:  
+- Saat sub-tugas diklik (selesai):  
   ![Sesudah Coret Subtugas](docs/screenshots/sesudah-subtugas.png)
 
-- **Sesudah Interaksi Sub-Tugas Disembunyikan (slideToggle)**:  
-  ![Sesudah Toggle Sembunyikan Subtugas](docs/screenshots/sesudah-subtugas-toggle.png)
+- Saat sub-tugas disembunyikan (slideToggle):  
+  ![Sesudah Toggle Subtugas](docs/screenshots/sesudah-subtugas-toggle.png)
 
 ---
 
-## Screenshot Tampilan Utama
+## Screenshot Tampilan
 
-### Tampilan Desktop
+### Desktop
 1. **Dashboard (`index.html`)**  
    ![Dashboard Desktop](docs/screenshots/desktop-index.png)
 
@@ -121,7 +84,7 @@ Video demonstrasi interaktivitas berdurasi sekitar 1 hingga 2 menit. Berikut lan
 3. **Detail Tugas (`detail-tugas.html`)**  
    ![Detail Tugas Desktop](docs/screenshots/desktop-detail.png)
 
-### Tampilan Mobile
+### Mobile
 1. **Dashboard Mobile**  
    ![Dashboard Mobile](docs/screenshots/mobile-index.png)
 
