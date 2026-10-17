@@ -34,6 +34,12 @@ Aplikasi ini dibangun menggunakan HTML semantic, CSS native (`style.css`), Boots
 
 ---
 
+## Video Demonstrasi Interaktivitas
+Rekaman video demonstrasi yang menampilkan seluruh rangkaian interaksi sisi client (filter data, penghapusan tugas, validasi formulir kosong, penambahan tugas baru, serta checklist dan toggle sub-tugas) tersedia pada repositori:
+- Berkas Video: [docs/videos/demo_interaktivitas_tugas5.webm](docs/videos/demo_interaktivitas_tugas5.webm)
+
+---
+
 ## Petunjuk Pengambilan Video Demonstrasi
 Video demonstrasi interaktivitas berdurasi sekitar 1 hingga 2 menit. Berikut langkah-langkah yang perlu direkam:
 

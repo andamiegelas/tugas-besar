@@ -1,4 +1,8 @@
 progress.md
 kumpulanpdftugas/
 rekam_demo.js
+rekam_video_playwright.js
 .demo_edge_profile/
+node_modules/
+package.json
+package-lock.json
