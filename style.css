@@ -95,6 +95,21 @@ h2 {
     border-bottom: 1px solid #dee2e6;
 }
 
+.item-subtugas {
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.15s ease;
+}
+
+.item-subtugas:hover {
+    background-color: #f8f9fa;
+}
+
+.subtugas-selesai {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
 footer {
     background-color: #ffffff;
     border-top: 1px solid #dee2e6;

@@ -39,26 +39,34 @@
                     <h1>Tambah Tugas Baru</h1>
                     <p class="text-muted">Masukkan data tugas kuliah yang ingin dicatat.</p>
 
-                    <form action="#" method="post">
+                    <!-- Alert Validasi jQuery -->
+                    <div id="alert-error" class="alert alert-danger" style="display: none;" role="alert">
+                        Mohon lengkapi seluruh field formulir sebelum menyimpan.
+                    </div>
+                    <div id="alert-sukses" class="alert alert-success" style="display: none;" role="alert">
+                        Data tugas berhasil disimpan! <a href="index.html" class="alert-link">Lihat di Daftar Tugas</a>
+                    </div>
+
+                    <form id="form-tambah-tugas" action="#" method="post" novalidate>
                         <div class="mb-3">
                             <label for="mata-kuliah" class="form-label">Mata Kuliah</label>
-                            <input type="text" class="form-control" id="mata-kuliah" name="mata_kuliah" placeholder="Contoh: Web Programming" required>
+                            <input type="text" class="form-control" id="mata-kuliah" name="mata_kuliah" placeholder="Contoh: Web Programming">
                         </div>
 
                         <div class="mb-3">
                             <label for="judul-tugas" class="form-label">Judul Tugas</label>
-                            <input type="text" class="form-control" id="judul-tugas" name="judul_tugas" placeholder="Contoh: Tugas 3 CSS" required>
+                            <input type="text" class="form-control" id="judul-tugas" name="judul_tugas" placeholder="Contoh: Tugas 3 CSS">
                         </div>
 
                         <div class="row">
                             <div class="col-md-4 mb-3">
                                 <label for="deadline" class="form-label">Deadline</label>
-                                <input type="date" class="form-control" id="deadline" name="deadline" required>
+                                <input type="date" class="form-control" id="deadline" name="deadline">
                             </div>
 
                             <div class="col-md-4 mb-3">
                                 <label for="prioritas" class="form-label">Prioritas</label>
-                                <select class="form-select" id="prioritas" name="prioritas" required>
+                                <select class="form-select" id="prioritas" name="prioritas">
                                     <option value="">Pilih prioritas</option>
                                     <option value="rendah">Rendah</option>
                                     <option value="sedang">Sedang</option>
@@ -68,7 +76,8 @@
 
                             <div class="col-md-4 mb-3">
                                 <label for="status" class="form-label">Status</label>
-                                <select class="form-select" id="status" name="status" required>
+                                <select class="form-select" id="status" name="status">
+                                    <option value="">Pilih status</option>
                                     <option value="belum">Belum Dimulai</option>
                                     <option value="proses">Sedang Dikerjakan</option>
                                     <option value="selesai">Selesai</option>
@@ -98,6 +107,8 @@
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

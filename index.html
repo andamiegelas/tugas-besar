@@ -41,77 +41,78 @@
                 <div class="col-6 col-md-3">
                     <div class="kotak-info">
                         <div>Total Tugas</div>
-                        <div class="angka-info">3</div>
+                        <div class="angka-info" id="angka-total">0</div>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="kotak-info">
                         <div>Belum Dimulai</div>
-                        <div class="angka-info text-secondary">1</div>
+                        <div class="angka-info text-secondary" id="angka-belum">0</div>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="kotak-info">
                         <div>Dikerjakan</div>
-                        <div class="angka-info text-warning">1</div>
+                        <div class="angka-info text-warning" id="angka-proses">0</div>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="kotak-info">
                         <div>Selesai</div>
-                        <div class="angka-info text-success">1</div>
+                        <div class="angka-info text-success" id="angka-selesai">0</div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Alert Notifikasi Interaktif -->
+        <div id="notifikasi-alert" class="alert alert-success alert-dismissible fade show mb-3" style="display: none;" role="alert">
+            <span id="notifikasi-pesan">Tindakan berhasil dilakukan.</span>
+            <button type="button" class="btn-close" id="btn-close-notifikasi" aria-label="Close"></button>
+        </div>
+
         <article class="card p-3">
-            <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
                 <h2 class="mb-0">Tabel Tugas</h2>
-                <a href="tambah-tugas.html" class="btn btn-primary btn-sm">+ Tambah Tugas</a>
+                <div class="d-flex gap-2">
+                    <button type="button" id="btn-toggle-filter" class="btn btn-outline-secondary btn-sm">Filter Tugas</button>
+                    <button type="button" id="btn-reset-data" class="btn btn-outline-warning btn-sm">Reset Data Awal</button>
+                    <a href="tambah-tugas.html" class="btn btn-primary btn-sm">+ Tambah Tugas</a>
+                </div>
+            </div>
+
+            <!-- Panel Filter (slideToggle oleh jQuery) -->
+            <div id="panel-filter" class="p-3 mb-3 bg-light border rounded" style="display: none;">
+                <div class="row align-items-center g-2">
+                    <div class="col-auto">
+                        <label class="form-label mb-0 fw-bold">Filter Status:</label>
+                    </div>
+                    <div class="col-auto">
+                        <div class="btn-group btn-group-sm" role="group">
+                            <button type="button" class="btn btn-outline-primary btn-filter active" data-status="semua">Semua</button>
+                            <button type="button" class="btn btn-outline-primary btn-filter" data-status="belum">Belum Dimulai</button>
+                            <button type="button" class="btn btn-outline-primary btn-filter" data-status="proses">Sedang Dikerjakan</button>
+                            <button type="button" class="btn btn-outline-primary btn-filter" data-status="selesai">Selesai</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="table-responsive">
-                <table class="table table-bordered table-hover">
+                <table class="table table-bordered table-hover mb-0">
                     <thead class="table-light">
                         <tr>
-                            <th>No</th>
+                            <th style="width: 50px;">No</th>
                             <th>Mata Kuliah</th>
                             <th>Judul Tugas</th>
                             <th>Deadline</th>
                             <th>Prioritas</th>
                             <th>Status</th>
-                            <th>Aksi</th>
+                            <th style="width: 140px;">Aksi</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Web Programming</td>
-                            <td>Tugas 3 CSS & Layout</td>
-                            <td>25 September 2026</td>
-                            <td><span class="badge-prioritas prioritas-tinggi">Tinggi</span></td>
-                            <td><span class="badge-status status-proses">Sedang Dikerjakan</span></td>
-                            <td><a href="detail-tugas.html" class="btn btn-outline-primary btn-sm">Detail</a></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Basis Data</td>
-                            <td>ERD Toko Online</td>
-                            <td>28 September 2026</td>
-                            <td><span class="badge-prioritas prioritas-sedang">Sedang</span></td>
-                            <td><span class="badge-status status-belum">Belum Dimulai</span></td>
-                            <td><a href="detail-tugas.html" class="btn btn-outline-primary btn-sm">Detail</a></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Kalkulus II</td>
-                            <td>Latihan Soal Integral</td>
-                            <td>30 September 2026</td>
-                            <td><span class="badge-prioritas prioritas-rendah">Rendah</span></td>
-                            <td><span class="badge-status status-selesai">Selesai</span></td>
-                            <td><a href="detail-tugas.html" class="btn btn-outline-primary btn-sm">Detail</a></td>
-                        </tr>
+                    <tbody id="tabel-tugas-body">
+                        <!-- Baris tabel di-render dinamis oleh JavaScript -->
                     </tbody>
                 </table>
             </div>
@@ -124,6 +125,8 @@
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
